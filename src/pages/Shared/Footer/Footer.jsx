@@ -1,5 +1,6 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@fortawesome/fontawesome-free/css/fontawesome.min.css";
+import logo from '/logo-w.png';
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto py-8 px-4">
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/4 mb-6 md:mb-0">
-            <img className="w-64 mb-4" src="/logo-w.png" alt="Logo" />
+            <img className="h-12 mb-4" src={logo} alt="Logo" />
             <p>&copy; 2023 AlimamaCarZone. All rights reserved.</p>
           </div>
           <div className="w-full md:w-1/4 mb-6 md:mb-0">
