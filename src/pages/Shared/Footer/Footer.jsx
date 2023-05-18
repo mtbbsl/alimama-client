@@ -4,7 +4,7 @@ import logo from '/logo-w.png';
 
 const Footer = () => {
   return (
-    <footer className="footer p-10 bg-gray-900 text-white">
+    <footer className="footer p-10 bg-gray-900 text-white rounded-xl mt-6">
       <div>
         <img src={logo} alt="Logo" className="h-12 mb-4" />
         <p>&copy; 2023 AlimamaCarZone. All rights reserved.</p>
