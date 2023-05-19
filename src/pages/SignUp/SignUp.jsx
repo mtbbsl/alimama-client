@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 import login from "../../assets/others/Signup.jpg";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import useTitle from "../../hooks/useTitle";
 
 const SignUp = () => {
+  useTitle('Sign Up');
 
     const { createUser, updateUserData } = useContext(AuthContext);
     
