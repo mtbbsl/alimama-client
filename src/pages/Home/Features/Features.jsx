@@ -40,7 +40,7 @@ const Features = () => {
                 different interests and preferences.
               </li>
             </ul>
-            <button className="btn btn-warning">Know More</button>
+            <button className="btn btn-outline btn-warning">Know More</button>
           </div>
         </div>
       </div>

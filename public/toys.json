@@ -1,0 +1,68 @@
+[
+  {
+    "id": "toy01",
+    "title": "Micro Police SUV",
+    "img": "https://m.media-amazon.com/images/I/71jrSZJjiHL._AC_SL1500_.jpg",
+    "price": 12,
+    "rating": "4.5",
+    "category": "Police Vehicle",
+    "quantity": 250,
+    "description": "Driven by Battery – Micro Police SUV – Toy Car with Lights and Sound – Rescue Cars and Toys for Kids Aged 3 and Up, WH1127Z, Blue,red",
+    "hyperlink": "https://www.amazon.com/Driven-Battat-Police-Lights-Rescue/dp/B0881GYNC9/"
+  },
+  {
+    "id": "toy02",
+    "title": "Charger Police Car",
+    "img": "https://m.media-amazon.com/images/I/61GnrclK8XL._AC_SX679_.jpg",
+    "price": "67",
+    "rating": "4.5",
+    "category": "Police Vehicle",
+    "quantity": "120",
+    "description": "Fast & Furious 1:32 2006 Dodge Charger Police Car Die-Cast Car, Toys for Kids and Adults",
+    "hyperlink": "https://www.amazon.com/Fast-Furious-Charger-Police-Die-Cast/dp/B0BTJD22X3/"
+  },
+  {
+    "id": "toy03",
+    "title": "Sports Red Race Car ",
+    "img": "https://m.media-amazon.com/images/I/81smQxculNL._AC_SX679_.jpg",
+    "price": "99",
+    "rating": "4.8",
+    "category": "Sports Car",
+    "quantity": "75",
+    "description": "LEGO Speed Champions 1970 Ferrari 512 M Toy Car Model Building Kit 76906 Sports Red Race Car Toy, Collectible Set with Racing Driver Mini figure",
+    "hyperlink": "https://www.amazon.com/LEGO-Champions-Competizione-Building-Collectible/dp/B0BLJ478M7/"
+  },
+  {
+    "id": "toy04",
+    "title": "LEGO Sports Car Toy",
+    "img": "https://m.media-amazon.com/images/I/81Bet69RFOL._AC_SX679_.jpg",
+    "price": "20",
+    "rating": "4.8",
+    "category": "Sports Car",
+    "quantity": "280",
+    "description": "LEGO Creator 3in1 Sports Car Toy 31100 Building Kit (134 Pieces)",
+    "hyperlink": "https://www.amazon.com/LEGO-Creator-Sports-Building-Pieces/dp/B07WHF9228/"
+  },
+  {
+    "id": "toy05",
+    "title": "CAT Dump Truck",
+    "img": "https://m.media-amazon.com/images/I/81YFehwQALL._AC_SX679_.jpg",
+    "price": "24",
+    "rating": "4.7",
+    "category": "Toy Truck",
+    "quantity": "200",
+    "description": "CatToysOfficial, CAT Construction Tough Rigs 15in Dump Truck Toy, Ages 3 and up",
+    "hyperlink": "https://www.amazon.com/CAT-Tough-Rigs-Dump-Truck/dp/B07QFB9T78/"
+  },
+  {
+    "id": "toy06",
+    "title": "Toys Dump Truck",
+    "img": "https://m.media-amazon.com/images/I/813Gfj156+L._AC_SX679_.jpg",
+    "price": "16",
+    "rating": "4.9",
+    "category": "Toy Truck",
+    "quantity": "300",
+    "description": "Green Toys Dump Truck, Red/Yellow CB - Pretend Play, Motor Skills, Kids Toy Vehicle. No BPA, phthalates, PVC. Dishwasher Safe, Recycled Plastic, Made in USA.",
+    "hyperlink": "https://www.amazon.com/Green-Toys-Dump-Truck-Closed/dp/B0828LSJKK/"
+  }
+]

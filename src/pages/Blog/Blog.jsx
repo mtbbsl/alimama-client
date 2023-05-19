@@ -10,9 +10,9 @@ const Blog = () => {
           </h1>
           <p>
             An access token and refresh token are commonly used in
-            authentication and authorization systems. Here's an explanation of
-            what they are, how they work, and where they should be stored on the
-            client-side:
+            authentication and authorization systems. Here&apos;s an explanation
+            of what they are, how they work, and where they should be stored on
+            the client-side:
           </p>
           <ol className="space-y-6 list-decimal ps-4">
             <li>
@@ -69,11 +69,11 @@ const Blog = () => {
             </li>
           </ul>
           <p>
-            It's crucial to implement proper security measures to protect access
-            and refresh tokens from unauthorized access or exposure.
+            It&apos;s crucial to implement proper security measures to protect
+            access and refresh tokens from unauthorized access or exposure.
             Additionally, the specific storage mechanism can vary based on the
             client-side technology being used (e.g., cookies for web
-            applications, secure storage for mobile applications). It's
+            applications, secure storage for mobile applications). It&apos;s
             recommended to follow security best practices and guidelines
             provided by the authentication and authorization framework or
             library being utilized.
@@ -89,8 +89,8 @@ const Blog = () => {
           <p>
             SQL (Structured Query Language) and NoSQL (Not Only SQL) are two
             different types of database management systems with distinct
-            characteristics and purposes. Here's a detailed explanation of SQL
-            and NoSQL databases:
+            characteristics and purposes. Here&apos;s a detailed explanation of
+            SQL and NoSQL databases:
           </p>
           <h2 className="text-xl font-bold">SQL Databases:</h2>
           <ul className="space-y-2 list-disc ps-4">
@@ -178,7 +178,7 @@ const Blog = () => {
           </h1>
           <p>
             Express.js and NestJS are both web application frameworks used to
-            build server-side applications. Here's an explanation of each:
+            build server-side applications. Here&apos;s an explanation of each:
           </p>
           <h2 className="text-xl font-bold">Express.js:</h2>
           <ul className="space-y-2 list-disc ps-4">
@@ -222,7 +222,7 @@ const Blog = () => {
               scalable and testable applications. It supports various design
               patterns like MVC (Model-View-Controller), middleware, decorators,
               and modules, allowing developers to create organized and
-              maintainable codebases.
+              maintainable code bases.
             </li>
             <li>
               NestJS integrates well with TypeScript, enabling strong typing,
@@ -262,7 +262,8 @@ const Blog = () => {
             process the documents sequentially.
           </p>
           <p>
-            Here's an overview of how the MongoDB aggregate framework works:
+            Here&apos;s an overview of how the MongoDB aggregate framework
+            works:
           </p>
           <ol className="space-y-6 list-decimal ps-4">
             <li>
