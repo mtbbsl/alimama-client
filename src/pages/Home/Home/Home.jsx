@@ -1,6 +1,6 @@
 import Features from "../Features/Features";
 import Team from "../Team/Team";
-import Banner from "./Banner/Banner";
+import Banner from "../Banner/Banner";
 
 
 const Home = () => {

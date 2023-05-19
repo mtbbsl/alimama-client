@@ -1,15 +1,15 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import img1 from "../../../../assets/carousel/img1.jpg";
-import img2 from "../../../../assets/carousel/img2.jpg";
-import img3 from "../../../../assets/carousel/img3.jpg";
-import img4 from "../../../../assets/carousel/img4.jpg";
-import img5 from "../../../../assets/carousel/img5.jpg";
-import img6 from "../../../../assets/carousel/img6.jpg";
+import img1 from "../../../assets/carousel/img1.jpg";
+import img2 from "../../../assets/carousel/img2.jpg";
+import img3 from "../../../assets/carousel/img3.jpg";
+import img4 from "../../../assets/carousel/img4.jpg";
+import img5 from "../../../assets/carousel/img5.jpg";
+import img6 from "../../../assets/carousel/img6.jpg";
 
 const Banner = () => {
   return (
-    <div className="carousel carousel-center rounded-xl bg-gray-900 py-6">
+    <div className="carousel carousel-center rounded-xl bg-gray-900 my-12 py-12">
       <Carousel
         autoPlay={true}
         infiniteLoop={true}
