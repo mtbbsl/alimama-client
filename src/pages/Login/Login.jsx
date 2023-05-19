@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
-  const { signIn } = useContext(AuthContext);
+  const { signIn, signInWithGoogle } = useContext(AuthContext);
 
   const [show, setShow] = useState(false);
   const [error, setError] = useState("");
@@ -28,6 +28,17 @@ const Login = () => {
         setError(error.message);
       });
   };
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then(result => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+      })
+      .catch(error => {
+        console.error(error.message);
+      })
+  }
 
   return (
     <div className="hero bg-gray-900 text-white my-12 py-12 rounded-xl">
@@ -83,6 +94,9 @@ const Login = () => {
                   className="btn btn-outline btn-warning"
                 />
               </div>
+              <button onClick={handleGoogleSignIn} className="btn btn-block gap-2 my-4">
+                <i className="fa-brands fa-google"></i>Login with Google
+              </button>
             </form>
             <p className="text-red-300 text-center px-4">{error}</p>
             <p className="my-4 text-center">
