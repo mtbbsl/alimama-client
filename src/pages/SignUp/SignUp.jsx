@@ -116,7 +116,7 @@ const SignUp = () => {
                 />
               </div>
             </form>
-            <p className="text-yellow-300 text-center px-4">{error}</p>
+            <p className="text-red-500 text-center px-4">{error}</p>
             <p className="text-green-500 text-center px-4">{success}</p>
             <p className="my-4 text-center">
               Already have an account?{" "}

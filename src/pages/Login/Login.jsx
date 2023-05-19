@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import login from "../../assets/others/Login.jpg";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
+  const { signIn } = useContext(AuthContext);
 
-    const {signIn} = useContext(AuthContext);
+  const [show, setShow] = useState(false);
+  const [error, setError] = useState("");
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -15,11 +17,16 @@ const Login = () => {
     console.log(email, password);
 
     signIn(email, password)
-        .then(result => {
-            const user = result.user;
-            console.log(user);
-        })
-        .catch(error => console.log(error));
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        form.reset();
+        setError("");
+      })
+      .catch((error) => {
+        console.error(error.message);
+        setError(error.message);
+      });
   };
 
   return (
@@ -49,12 +56,21 @@ const Login = () => {
                   <span className="label-text">Password</span>
                 </label>
                 <input
-                  type="password"
+                  type={show ? "text" : "password"}
                   name="password"
                   placeholder="password"
                   className="input input-bordered"
                   required
                 />
+                <p onClick={() => setShow(!show)}>
+                  <small>
+                    {show ? (
+                      <span>Hide Password</span>
+                    ) : (
+                      <span>Show Password</span>
+                    )}
+                  </small>
+                </p>
               </div>
               <div className="form-control mt-6">
                 <input
@@ -64,6 +80,7 @@ const Login = () => {
                 />
               </div>
             </form>
+            <p className="text-red-300 text-center px-4">{error}</p>
             <p className="my-4 text-center">
               Haven&apos;t an account yet?{" "}
               <Link className="text-warning font-bold" to="/signup">
