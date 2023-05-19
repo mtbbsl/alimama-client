@@ -1,8 +1,17 @@
 import { Link } from "react-router-dom";
 import logo from "/logo-w.png";
-import avatar from "/photo.jpg";
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const NavBar = () => {
+  const {user, logOut} = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => { })
+      .catch(error => console.error(error))
+  }
+
   const navItems = (
     <>
       <li>
@@ -49,19 +58,28 @@ const NavBar = () => {
         <ul className="menu menu-horizontal px-1">{navItems}</ul>
       </div>
       <div className="navbar-end">
-        <div className="flex items-center">
-          <img
-            src={avatar}
-            alt="profile picture"
-            className="w-12 rounded-full cursor-pointer"
-          />
-          <button className="btn btn-outline btn-warning btn-sm">
-            SignOut
-          </button>
-        </div>
-        <Link to="/login">
-          <button className="btn btn-outline btn-warning btn-sm">Login</button>
-        </Link>
+        {user ? (
+          <div className="flex items-center">
+            <img
+              src={user.photoURL}
+              alt={user.displayName}
+              title={user.displayName}
+              className="w-12 rounded-full cursor-pointer me-2"
+            />
+            <button
+              onClick={handleLogOut}
+              className="btn btn-outline btn-warning btn-sm"
+            >
+              SignOut
+            </button>
+          </div>
+        ) : (
+          <Link to="/login">
+            <button className="btn btn-outline btn-warning btn-sm">
+              Login
+            </button>
+          </Link>
+        )}
       </div>
     </div>
   );

@@ -65,9 +65,13 @@ const Login = () => {
                 <p onClick={() => setShow(!show)}>
                   <small>
                     {show ? (
-                      <span>Hide Password</span>
+                      <span className="label-text-alt link link-hover">
+                        Hide Password
+                      </span>
                     ) : (
-                      <span>Show Password</span>
+                      <span className="label-text-alt link link-hover">
+                        Show Password
+                      </span>
                     )}
                   </small>
                 </p>
