@@ -3,10 +3,10 @@
     "id": "toy01",
     "title": "Micro Police SUV",
     "img": "https://m.media-amazon.com/images/I/71jrSZJjiHL._AC_SL1500_.jpg",
-    "price": 12,
+    "price": "12",
     "rating": "4.5",
     "category": "Police Vehicle",
-    "quantity": 250,
+    "quantity": "250",
     "description": "Driven by Battery – Micro Police SUV – Toy Car with Lights and Sound – Rescue Cars and Toys for Kids Aged 3 and Up, WH1127Z, Blue,red",
     "hyperlink": "https://www.amazon.com/Driven-Battat-Police-Lights-Rescue/dp/B0881GYNC9/"
   },
