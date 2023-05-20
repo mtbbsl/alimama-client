@@ -5,7 +5,7 @@ const Gallery = () => {
   const [galleries, setGalleries] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/gallery")
+    fetch("https://alimama-server.vercel.app/gallery")
       .then((res) => res.json())
       .then((data) => setGalleries(data));
   }, []);
@@ -30,7 +30,7 @@ const Gallery = () => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {galleries.map((gallery) => (
-            <GalleryCard key={gallery.id} gallery={gallery}></GalleryCard>
+            <GalleryCard key={gallery._id} gallery={gallery}></GalleryCard>
           ))}
         </div>
       </div>
