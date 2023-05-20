@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const GalleryCard = ({ gallery }) => {
   const { title, img, price, rating } = gallery;
 
@@ -11,7 +13,9 @@ const GalleryCard = ({ gallery }) => {
         <p>Price: ${price}</p>
         <p>Rating: {rating}</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-outline btn-warning">View Details</button>
+          <Link to="/details">
+            <button className="btn btn-outline btn-warning">View Details</button>
+          </Link>
         </div>
       </div>
     </div>

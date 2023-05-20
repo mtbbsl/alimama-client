@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import vehicle1 from '../../../assets/features/vehicle1.jpg';
 import vehicle2 from '../../../assets/features/vehicle2.jpg';
 import vehicle3 from '../../../assets/features/vehicle3.jpg';
@@ -40,7 +41,9 @@ const Features = () => {
                 different interests and preferences.
               </li>
             </ul>
-            <button className="btn btn-outline btn-warning">Know More</button>
+            <Link to="/more">
+              <button className="btn btn-outline btn-warning">Know More</button>
+            </Link>
           </div>
         </div>
       </div>
