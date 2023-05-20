@@ -26,27 +26,29 @@ const router = createBrowserRouter([
       },
       {
         path: "all-toys",
-        element: <AllToys></AllToys>
+        element: <AllToys></AllToys>,
       },
       {
         path: "my-toys",
-        element: <MyToys></MyToys>
+        element: <MyToys></MyToys>,
       },
       {
         path: "add-toy",
-        element: <AddToy></AddToy>
+        element: <AddToy></AddToy>,
       },
       {
-        path: "toy-detail",
-        element: <ToyDetail></ToyDetail>
+        path: "toy-detail/:id",
+        element: <ToyDetail></ToyDetail>,
+        loader: ({params}) =>
+          fetch(`http://localhost:5000/toys/${params.id}`),
       },
       {
         path: "login",
-        element: <Login></Login>
+        element: <Login></Login>,
       },
       {
         path: "signup",
-        element: <SignUp></SignUp>
+        element: <SignUp></SignUp>,
       },
     ],
   },

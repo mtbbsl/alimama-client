@@ -1,21 +1,27 @@
+import { useLoaderData } from "react-router-dom";
 
 
 const ToyDetail = () => {
+
+  const toys = useLoaderData();
+  const {title, img, price, rating, category, quantity, description, hyperlink} = toys;
+
     return (
       <div className="hero bg-gray-900 text-white my-12 py-12 rounded-xl">
-        <div className="hero-content flex flex-col gap-12 px-12">
-          <div className="space-y-6 text-center">
-            <h1 className="text-5xl font-bold">Single Toy Detail</h1>
-            <p>
-              After clicking on the View Details button, he/ she will be
-              redirected to the Toys Details route ( /toy/:id ) containing the
-              information ( picture, toy name, seller name, seller email, price,
-              rating, available quantity, and detail description) (optional) If
-              possible, display the view details in a modal.
-            </p>
-          </div>
-          <div>
-            <h2>Gallery Tabs are here</h2>
+        <div className="hero">
+          <div className="hero-content flex-col lg:flex-row gap-12">
+            <img src={img} className="max-w-md rounded-lg shadow-2xl" />
+            <div className="space-y-2">
+              <h1 className="text-3xl font-bold mb-6">Detail of {title}</h1>
+              <p>Seller Name:</p>
+              <p>Seller Email:</p>
+              <p>Price: ${price}</p>
+              <p>Rating: {rating}</p>
+              <p>Category: {category}</p>
+              <p>Available Quantity: {quantity}</p>
+              <p>Detail Description: {description}</p>
+              <p>Amazon Link: {hyperlink}</p>
+            </div>
           </div>
         </div>
       </div>
