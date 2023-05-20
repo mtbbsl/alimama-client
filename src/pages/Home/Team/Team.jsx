@@ -7,7 +7,9 @@ const Team = () => {
       <div className="hero bg-gray-900 text-white my-12 py-12 rounded-xl">
         <div className="hero-content flex flex-col gap-12 px-12">
           <div className="space-y-6 text-center">
-            <h1 className="text-5xl font-bold">Meet Our Engineers</h1>
+            <div data-aos="fade-down">
+              <h1 className="text-5xl font-bold">Meet Our Engineers</h1>
+            </div>
             <p>
               Meet our engineers, a dedicated group of professionals passionate
               about delivering exceptional results. With diverse expertise and a
@@ -16,7 +18,7 @@ const Team = () => {
               success and strive for excellence in everything we do.
             </p>
           </div>
-          <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* Card Engineer-1 */}
             <div className="card w-96 bg-base-100 shadow-xl">
               <figure>

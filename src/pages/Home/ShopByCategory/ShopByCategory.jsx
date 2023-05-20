@@ -6,6 +6,7 @@ import "react-tabs/style/react-tabs.css";
 const ShopByCategory = () => {
   const [galleries, setGalleries] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
+  console.log(selectedCategory);
 
   useEffect(() => {
     fetch("https://alimama-server.vercel.app/gallery")
@@ -20,7 +21,9 @@ const ShopByCategory = () => {
   return (
     <div className="bg-gray-900 text-white my-12 py-12 rounded-xl">
       <div className="space-y-6 text-center pb-12">
-        <h1 className="text-5xl font-bold">Shop by Gallery</h1>
+        <div data-aos="fade-down">
+          <h1 className="text-5xl font-bold">Shop by Gallery</h1>
+        </div>
         <p>
           Please try to shop your desired toy car by browsing this categorized
           gallery.

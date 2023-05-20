@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import GalleryCard from "./GalleryCard";
 
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
+
 const Gallery = () => {
   const [galleries, setGalleries] = useState([]);
 
@@ -14,7 +19,9 @@ const Gallery = () => {
     <div className="hero bg-gray-900 text-white my-12 py-12 rounded-xl">
       <div className="hero-content flex flex-col gap-12 px-12">
         <div className="space-y-6 text-center">
-          <h1 className="text-5xl font-bold">Toy Car Gallery</h1>
+          <div data-aos="fade-down">
+            <h1 className="text-5xl font-bold">Toy Car Gallery</h1>
+          </div>
           <p>
             The Toy Car Gallery is a captivating collection showcasing a wide
             range of toy cars from various eras, models, and brands. Explore a
