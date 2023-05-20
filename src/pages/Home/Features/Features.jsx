@@ -42,7 +42,7 @@ const Features = () => {
               </li>
             </ul>
             <Link to="/more">
-              <button className="btn btn-outline btn-warning">Know More</button>
+              <button className="btn btn-outline btn-warning mt-6">Know More</button>
             </Link>
           </div>
         </div>

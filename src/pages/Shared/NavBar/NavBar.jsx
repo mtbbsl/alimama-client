@@ -57,7 +57,7 @@ const NavBar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navItems}</ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end pr-6">
         {user ? (
           <div className="flex items-center">
             <img
