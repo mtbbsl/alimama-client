@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import login from "../../assets/others/Login.jpg";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -6,10 +6,14 @@ import useTitle from "../../hooks/useTitle";
 
 const Login = () => {
   const { signIn, signInWithGoogle } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
   const [show, setShow] = useState(false);
   const [error, setError] = useState("");
-  useTitle('Login');
+  useTitle("Login");
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -24,6 +28,7 @@ const Login = () => {
         console.log(user);
         form.reset();
         setError("");
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.error(error.message);
@@ -33,14 +38,15 @@ const Login = () => {
 
   const handleGoogleSignIn = () => {
     signInWithGoogle()
-      .then(result => {
+      .then((result) => {
         const loggedUser = result.user;
+        navigate(from, { replace: true });
         console.log(loggedUser);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error(error.message);
-      })
-  }
+      });
+  };
 
   return (
     <div className="hero bg-gray-900 text-white my-12 py-12 rounded-xl">
@@ -96,7 +102,10 @@ const Login = () => {
                   className="btn btn-outline btn-warning"
                 />
               </div>
-              <button onClick={handleGoogleSignIn} className="btn btn-block gap-2 my-4">
+              <button
+                onClick={handleGoogleSignIn}
+                className="btn btn-block gap-2 my-4"
+              >
                 <i className="fa-brands fa-google"></i>Login with Google
               </button>
             </form>
