@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      <h1>Alimama Car Zone</h1>
+      
     </>
   )
 }

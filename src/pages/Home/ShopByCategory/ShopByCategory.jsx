@@ -60,7 +60,7 @@ const ShopByCategory = () => {
                       </div>
                       <div className="card-actions justify-end mr-4 mb-4">
                         <Link
-                          to={`/toy-detail/${gallery._id}`}
+                          to={`/toyDetail/${gallery._id}`}
                           className="btn btn-warning btn-sm"
                         >
                           View Details
@@ -95,7 +95,7 @@ const ShopByCategory = () => {
                       </div>
                       <div className="card-actions justify-end mr-4 mb-4">
                         <Link
-                          to={`/toy-detail/${gallery._id}`}
+                          to={`/toyDetail/${gallery._id}`}
                           className="btn btn-warning btn-sm"
                         >
                           View Details
@@ -130,7 +130,7 @@ const ShopByCategory = () => {
                       </div>
                       <div className="card-actions justify-end mr-4 mb-4">
                         <Link
-                          to={`/toy-detail/${gallery._id}`}
+                          to={`/toyDetail/${gallery._id}`}
                           className="btn btn-warning btn-sm"
                         >
                           View Details
