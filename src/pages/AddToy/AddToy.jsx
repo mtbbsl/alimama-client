@@ -1,21 +1,32 @@
+import { useContext } from "react";
 import useTitle from "../../hooks/useTitle";
 import { useForm } from "react-hook-form";
+import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const AddToy = () => {
   useTitle("Add A Toy");
+  const { user } = useContext(AuthContext);
   
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const onSubmit = data => {
-    fetch("http://localhost:5000/addToy", {
+    fetch("https://alimama-server.vercel.app/addToy", {
       method: "POST",
-      headers: { 'Content-Type': 'application/json'},
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     })
-    .then(res => res.json())
-    .then(result => {
-      console.log(result);
-    })
-    console.log(data);
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result);
+        if (result.insertedId) {
+          Swal.fire({
+            title: "Success!",
+            text: "Toy added successfully",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
+        }
+      });
   };
 
 
@@ -41,6 +52,7 @@ const AddToy = () => {
                       type="text"
                       name="img"
                       placeholder="Picture URL"
+                      defaultValue="https://m.media-amazon.com/images/I/71jrSZJjiHL._AC_SL1500_.jpg"
                       className="input input-bordered"
                     />
                   </div>
@@ -53,6 +65,7 @@ const AddToy = () => {
                       type="text"
                       name="title"
                       placeholder="Toy Name"
+                      defaultValue="Micro Police SUV"
                       className="input input-bordered"
                     />
                   </div>
@@ -61,6 +74,7 @@ const AddToy = () => {
                       <span className="label-text">Seller Name</span>
                     </label>
                     <input
+                      value={user?.displayName}
                       {...register("seller")}
                       type="text"
                       name="seller"
@@ -73,6 +87,7 @@ const AddToy = () => {
                       <span className="label-text">Seller Email</span>
                     </label>
                     <input
+                      value={user?.email}
                       {...register("email")}
                       type="text"
                       name="email"
@@ -108,6 +123,7 @@ const AddToy = () => {
                       type="text"
                       name="price"
                       placeholder="Price"
+                      defaultValue="20"
                       className="input input-bordered"
                     />
                   </div>
@@ -120,6 +136,7 @@ const AddToy = () => {
                       type="text"
                       name="rating"
                       placeholder="Rating"
+                      defaultValue="4.2"
                       className="input input-bordered"
                     />
                   </div>
@@ -132,6 +149,7 @@ const AddToy = () => {
                       type="text"
                       name="quantity"
                       placeholder="Quantity"
+                      defaultValue="100"
                       className="input input-bordered"
                     />
                   </div>
@@ -144,6 +162,7 @@ const AddToy = () => {
                       type="textarea"
                       name="description"
                       placeholder="Description"
+                      defaultValue="Driven by Battery – Micro Police SUV – Toy Car with Lights and Sound – Rescue Cars and Toys for Kids Aged 3 and Up, WH1127Z, Blue,red"
                       className="textarea textarea-bordered"
                     />
                   </div>
@@ -156,11 +175,16 @@ const AddToy = () => {
                       type="textarea"
                       name="hyperlink"
                       placeholder="Product Link"
+                      defaultValue="https://www.amazon.com/Driven-Battat-Police-Lights-Rescue/dp/B0881GYNC9/"
                       className="input input-bordered"
                     />
                   </div>
                   <div className="form-control mt-6">
-                    <input type="submit" value="Add This Toy" className="btn btn-warning" />
+                    <input
+                      type="submit"
+                      value="Add This Toy"
+                      className="btn btn-warning"
+                    />
                   </div>
                 </div>
               </form>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+
 
 const GalleryCard = ({ gallery }) => {
   const { img } = gallery;

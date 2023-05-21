@@ -53,7 +53,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/toys/${params.id}`),
+          fetch(`https://alimama-server.vercel.app/toys/${params.id}`),
       },
       {
         path: "login",
