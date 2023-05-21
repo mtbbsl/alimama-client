@@ -9,7 +9,7 @@ const ShopByCategory = () => {
   console.log(selectedCategory);
 
   useEffect(() => {
-    fetch("https://alimama-server.vercel.app/gallery")
+    fetch("https://alimama-server.vercel.app/toys")
       .then((res) => res.json())
       .then((data) => setGalleries(data));
   }, []);

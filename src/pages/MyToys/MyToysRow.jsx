@@ -1,7 +1,7 @@
 
 
-const MyToysRow = ({toys}) => {
-    const { title, price, rating, category, quantity} = toys;
+const MyToysRow = ({myToy}) => {
+    const { title, price, rating, category, quantity} = myToy;
 
     const handleDelete = id => {
       const proceed = confirm('Are you sure want to delete');

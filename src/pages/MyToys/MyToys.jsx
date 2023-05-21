@@ -8,7 +8,7 @@ const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [myToys, setMyToys] = useState([]);
 
-  const url = `http://localhost:5000/toys?email=${user?.email}`;
+  const url = `https://alimama-server.vercel.app/myToys?email=${user?.email}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -37,9 +37,11 @@ const MyToys = () => {
                 </tr>
               </thead>
               <tbody>
-                {myToys.map((myToy) => (
-                  <MyToysRow key={myToy._id} myToy={myToy}></MyToysRow>
-                ))}
+                {
+                  myToys.map(myToy => (<MyToysRow
+                    key={myToy._id} myToy={myToy}
+                  ></MyToysRow>))
+                }
               </tbody>
             </table>
           </div>
