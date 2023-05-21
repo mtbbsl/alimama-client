@@ -1,6 +1,9 @@
+import useTitle from "../../hooks/useTitle";
 
 
 const AddToy = () => {
+  useTitle('Add A Toy');
+  
     return (
       <div className="hero bg-gray-900 text-white my-12 py-12 rounded-xl">
         <div className="hero-content flex flex-col gap-12 px-12">
